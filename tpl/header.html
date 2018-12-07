@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/element.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<script type="text/javascript" src="js/html5.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+		
+		<style type="text/css">
+			#header{
+				background-color:#00b4d4 ;
+				height:.4rem;
+				text-align: center;
+				color: #101010;
+				font-size: .18rem;
+				line-height: .4rem;
+				position:fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 2;
+			}
+			.index-search{
+ 	
+			 	width: 0.32rem;
+			 	height: 0.32rem;
+			 	position: absolute;
+			 	right: .40rem;
+			 	top: 0.1rem;
+			 	font-size: .18rem;
+			 	color: #FFFFFF;
+			 }
+			 .index-add{	
+			 	width: 0.32rem;
+			 	height: 0.32rem;
+			 	position: absolute;
+			 	right: 0rem;
+			 	top: 0rem;
+			 	font-size: .18rem;
+			 	color: #FFFFFF;
+			 	margin-bottom: 0.1rem;
+			 }
+			  .index-add span{
+			  	width: 0.24rem;
+			 	height: 0.24rem;
+			 	display: block;
+			  }
+			
+			 .add-menu{
+			 	position: absolute;
+			 	right: 0.05rem;
+			 	top: 0.40rem;
+			 	min-width: 1.2rem;
+			    min-height: 1.2rem;
+			    background: #26c6de;
+			 }
+			 .fade-enter-active, .fade-leave-active {
+			  transition: opacity .5s
+			}
+			.fade-enter, .fade-leave-active {
+			  opacity: 0
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header id="header">
+			<span>聊天</span>
+			<i class="index-search el-icon-search"></i>
+			
+			 <el-dropdown trigger="click" class="index-add">
+		      <span><i class="el-icon-plus"></i></span>
+		      <el-dropdown-menu slot="dropdown">
+		        <el-dropdown-item>
+		        	<i class="el-icon-plus"></i>
+		        	添加好友
+		        </el-dropdown-item>
+		        <el-dropdown-item>
+		        	<i class="el-icon-question"></i>
+		        	帮助与反馈
+		        </el-dropdown-item>
+		       
+		      </el-dropdown-menu>
+		    </el-dropdown>
+		    
+			
+			
+			 <transition name="fade">
+				<article class="add-menu" v-if="add_menu">
+					
+				</article>
+			</transition>
+			
+		</header>
+		
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<script type="text/javascript" src="js/element.min.js" ></script>
+		<script>
+			new Vue({
+				el:"#header",
+				data(){
+					return{
+						 fullscreenLoading: true,
+	        			 add_menu:false,
+					}
+					
+				},
+				
+				created() {
+			    	setTimeout(() => {
+			          this.fullscreenLoading = false;
+			        }, 500);
+				},
+				mounted: function () {
+					
+				},
+				methods: {
+				  	geturl:function(url){
+				  		top.location.href=url;
+				  	},
+			
+				  	//过滤空格
+				  	trim:function(str){  
+				        return str.replace(/(^\s*)|(\s*$)/g,"");  
+				    }
+				}
+				
+			})
+		</script>
+	</body>
+</html>
