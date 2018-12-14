@@ -8,19 +8,21 @@ class Index
     {
         return '';
     }
-	
-	
-	public function talk_list(){
-		$server = $_POST['http_server'];
-		$userid = (int)$_POST['userid'];
+    
+    
+    public function talk_list(){
+        $server = $_POST['http_server'];
+        $userid = (int)$_POST['userid'];
         $login_token = $_POST['login_token'];
 
-
-
-		$redis = Redis::getInstance();
+        $redis = Redis::getInstance();
 
         $redis_login_token = $redis->hget("logins", "user_".$userid);
-        dump($redis_login_token);
+
+        if($login_token != $redis_login_token){
+            return;
+        }
+
 
         $list = $redis->lrange('talk_list',0,-1);
 
@@ -33,6 +35,6 @@ class Index
 
 
 
-		
-	}
+        
+    }
 }

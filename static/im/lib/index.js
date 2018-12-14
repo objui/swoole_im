@@ -92,6 +92,20 @@ new Vue({
 	},
 	methods: {
 		_init:function(){
+			let userid=window.sessionStorage.getItem('userid');
+			let login_token=window.sessionStorage.getItem('login_token');
+			axios({
+				  method: 'post',
+				  url: api_url+'/index/index/talk_list',
+				  data:'userid='+userid+'&login_token='+login_token,
+				  headers: {
+		            'Content-Type': 'application/x-www-form-urlencoded'
+		         }
+				}).then(function(response){
+					console.log(response)
+					
+				})	
+				
 			
 			websocket.onopen = function (evt) {
 				let info = {"userid":1};

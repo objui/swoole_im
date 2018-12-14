@@ -81,11 +81,11 @@ function get_ip() {
  * 接口输出格式
  */
 function api_callback(int $code,string $msg='',array $data=[]){
-	$res = [
-		'code' 	=> $code,
-		'msg'	=> $msg,
-		'data'	=> $data
-	];
-	
-	echo  json_encode($res);
+    $res = [
+        'code'     => $code,
+        'msg'    => $msg,
+        'data'    => $data
+    ];
+    
+    echo  json_encode($res);
 }
