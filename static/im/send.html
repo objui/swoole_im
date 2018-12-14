@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>OBJUI IM 聊天</title>
+		
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/element.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="js/html5.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+	<body>
+		<div id="app" v-cloak v-loading.fullscreen.lock="fullscreenLoading">
+			<header id="header">
+				<i class="header-back fa fa-angle-left" @click="geturl('index.html')"></i>
+				<span>与Bucky Barnes聊天</span>
+				<i class="header-more el-icon-more"></i>
+			</header>
+			
+			<article id="send-msgs">
+				<ul class="send-list">
+					<li class="clearfix">
+						<img src="images/black-widow.jpg">
+						<div class="bubble">
+							hello !Why are you protecting me?
+							
+						</div>
+					</li>
+					<li class="dual clearfix">
+						<img src="images/black-widow.jpg">
+						<div class="bubble">
+							hello !Why are you protecting me?
+							hello !Why are you protecting me?
+						</div>
+					</li>
+					<li class="dual clearfix">
+						<img src="images/black-widow.jpg">
+						<div class="bubble">
+							hello !Why are you protecting me?
+							hello !Why are you protecting me?
+						</div>
+					</li>
+					<li class="clearfix">
+						<img src="images/black-widow.jpg">
+						<div class="bubble">
+							hello !Why are you protecting me?
+							
+						</div>
+					</li>
+					<li class="clearfix">
+						<img src="images/black-widow.jpg">
+						<div class="bubble">
+							hello !Why are you protecting me?
+							
+						</div>
+					</li>
+					<li class="dual clearfix">
+						<img src="images/black-widow.jpg">
+						<div class="bubble">
+							hello !Why are you protecting me?
+							hello !Why are you protecting me?
+						</div>
+					</li>
+					
+				</ul>
+				
+			</article>
+			
+			<article id="footer">
+				<div class="send-from">
+					<el-input placeholder="请输入内容" prefix-icon="fa fa-microphone">
+						
+				    	<template slot="append">发送</template>
+				  	</el-input>
+				</div>
+				 
+			</article>
+		</div>
+		
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<script type="text/javascript" src="js/element.min.js" ></script>
+		<script type="text/javascript" src="lib/send.js"></script>
+		
+		<script>
+			
+		</script>
+	</body>
+</html>

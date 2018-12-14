@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>OBJUI IM 个人中心</title>
+		
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/element.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="js/html5.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+	<body>
+		<div id="app" v-cloak v-cloak v-loading.fullscreen.lock="fullscreenLoading">
+			<header id="header">
+				<span>个人中心</span>
+			</header>
+			<article id="find-list">
+				<ul>
+					<li class="myinfo-li">
+						<span class="arrow fa fa-address-card-o"></span>
+						<div class="bubble">
+							<img class="left" src="images/captain-america.jpg">
+							<p>
+								<strong>Bucky Barnes</strong> <br>
+								<span>objui@qq.com</span>
+							</p>
+						</div>
+						
+					</li>
+					
+					<li class="margin-bottom-20">
+						<span class="arrow fa fa-angle-right"></span>
+						<i class="fa fa-envelope-o"></i>
+						<p>绑定邮箱</p>
+					</li>
+					
+					<li>
+						<span class="arrow fa fa-angle-right"></span>
+						<i class="fa fa-unlock-alt"></i>
+						<p>修改密码</p>
+					</li>
+					<li>
+						<span class="arrow fa fa-angle-right"></span>
+						<i class="fa fa-wechat"></i>
+						<p>绑定微信</p>
+					</li>
+					
+					<li class="margin-top">
+						<span class="arrow fa fa-angle-right"></span>
+						<i class="el-icon-setting"></i>
+						<p>设置</p>
+					</li>
+					
+				</ul>
+				
+			</article>
+			
+			<iframe src="footer.html" id="footer"></iframe>
+		</div>
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<script type="text/javascript" src="js/element.min.js" ></script>
+		<script type="text/javascript" src="lib/myinfo.js"></script>
+	</body>
+</html>

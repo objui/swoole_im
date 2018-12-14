@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>OBJUI IM 登录</title>
+		
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/element.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="js/html5.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<header id="header">
+				<span>OBJUI IM 登录</span>
+			</header>
+			
+			<article class="margin20">
+				<section class="login-form">
+					
+					<input class="login-input" type="text" placeholder="用户名/邮箱/手机号" v-model="username" />
+					
+					<section class="login-password">
+						<i class="ico-password"></i>
+						<input class="login-input" type="password" placeholder="登录密码" v-model="password"/>
+					</section>
+					
+					<button class="login-btn" @click="login">登录</button>
+					
+				</section>
+				
+				<section class="login-link">
+					<span><a href="register.html">立即注册</a></span>
+					<span class="right">忘记密码</span>
+				</section>
+			</article>
+			
+		</div>
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<script type="text/javascript" src="js/element.min.js" ></script>
+		<script type="text/javascript" src="js/axios.min.js" ></script>
+		<script type="text/javascript" src="lib/config.js" ></script>
+		<script type="text/javascript" src="lib/login.js"></script>
+	</body>
+</html>

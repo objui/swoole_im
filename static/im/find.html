@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>OBJUI IM 发现</title>
+		
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/element.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="js/html5.js"></script>
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+	<body>
+		<div id="app" v-cloak v-cloak v-loading.fullscreen.lock="fullscreenLoading">
+			<header id="header">
+				<span>发现</span>
+			</header>
+			<article id="find-list">
+				<ul>
+					<li class="margin-bottom-20">
+						<span class="arrow fa fa-angle-right"></span>
+						<i class="fa fa-rss-square"></i>
+						<p>看一看</p>
+					</li>
+					
+					<li>
+						<span class="arrow fa fa-angle-right"></span>
+						<i class="fa fa-search-plus"></i>
+						<p>搜一搜</p>
+					</li>
+					<li>
+						<span class="arrow fa fa-angle-right"></span>
+						<i class="fa fa-user-plus"></i>
+						<p>附近的人</p>
+					</li>
+					
+					<li class="margin-top">
+						<span class="arrow fa fa-angle-right"></span>
+						<i class="fa fa-newspaper-o"></i>
+						<p>最新公告</p>
+					</li>
+					
+				</ul>
+				
+			</article>
+			
+			<iframe src="footer.html" id="footer"></iframe>
+		</div>
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+		<script type="text/javascript" src="js/element.min.js" ></script>
+		<script type="text/javascript" src="lib/find.js"></script>
+	</body>
+</html>
